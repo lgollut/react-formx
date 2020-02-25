@@ -1,0 +1,26 @@
+{
+  "name": "react-formx",
+  "version": "0.0.1",
+  "description": "A react package to manage form with state machines (XState)",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lgollut/react-formx.git"
+  },
+  "keywords": [
+    "React",
+    "form",
+    "xstate",
+    "state",
+    "machines"
+  ],
+  "author": "Louis Gollut <louis.gollut@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lgollut/react-formx/issues"
+  },
+  "homepage": "https://github.com/lgollut/react-formx#readme"
+}
