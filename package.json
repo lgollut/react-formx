@@ -1,10 +1,16 @@
 {
-  "name": "react-formx",
+  "name": "@lgollut/react-formx",
   "version": "0.0.1",
   "description": "A react package to manage form with state machines (XState)",
-  "main": "src/index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "types:check": "tsc --noEmit",
+    "types:declarations": "tsc --emitDeclarationOnly",
+    "build": "babel src --out-dir lib --extensions \".ts,.tsx\"",
+    "lint": "eslint src",
+    "prepare": "npm run lint && npm run types:check && npm run types:declarations && npm run build"
   },
   "repository": {
     "type": "git",
@@ -22,5 +28,37 @@
   "bugs": {
     "url": "https://github.com/lgollut/react-formx/issues"
   },
-  "homepage": "https://github.com/lgollut/react-formx#readme"
+  "homepage": "https://github.com/lgollut/react-formx#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "@babel/runtime": "^7.8.4",
+    "@babel/runtime-corejs3": "^7.8.4",
+    "@types/react": "^16.9.22",
+    "@typescript-eslint/eslint-plugin": "^2.21.0",
+    "@typescript-eslint/parser": "^2.21.0",
+    "@xstate/react": "^0.8.1",
+    "core-js": "^3.6.4",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "typescript": "^3.8.2",
+    "xstate": "^4.7.8"
+  },
+  "peerDependencies": {
+    "@xstate/react": "^0.8.1",
+    "react": "^16.8.0",
+    "xstate": "^4.7.8"
+  }
 }

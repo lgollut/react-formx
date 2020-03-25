@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    ["@babel/plugin-transform-runtime", { "corejs": false }],
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-object-rest-spread"
+  ],
+  "presets": [
+    ["@babel/env", { "modules": false, "useBuiltIns": "usage", "corejs": 3 }],
+    "@babel/react",
+    "@babel/preset-typescript"
+  ],
+  "sourceMaps": true
+}
